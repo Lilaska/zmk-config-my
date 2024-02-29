@@ -23,21 +23,21 @@
 
         default_layer {
             bindings = <
-          &kp ESC    &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR  &kp PERCENT         &kp QMARK    &kp AMPS       &kp STAR   &kp LPAR    &kp LBRC       &kp MINUS
-&kp CAPS  &kp GRAVE  &kp Q            &kp W        &kp E      &kp R       &kp T               &kp Y        &kp U          &kp I      &kp O       &kp SEMICOLON  &kp LBKT        &kp PAUSE_BREAK
-          &kp LCTRL  &kp A            &kp S        &kp D      &kp F       &kp G               &kp H        &kp J          &kp K      &kp L       &kp P          &mt RCTRL SQT
-          &kp LALT   &kp Z            &kp X        &kp C      &kp V       &kp B               &kp N        &kp M          &kp COMMA  &kp DOT     &kp FSLH       &kp UNDERSCORE
-                                      &lt 1 LWIN   &lt 2 TAB  &kp SPACE   &lt 1 LEFT_SHIFT    &lt 1 ENTER  &kp BACKSPACE  &lt 2 DEL  &kp RSHIFT
+        &kp RCTRL     &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR  &kp PERCENT     &kp QMARK    &kp AMPS       &kp STAR   &kp LPAR           &kp LBRC       &kp MINUS
+&tog 4  &kp SQT       &kp Q            &kp W        &kp E      &kp R       &kp T           &kp Y        &kp U          &kp I      &kp O              &kp SEMICOLON  &kp LBKT        &kp PAUSE_BREAK
+        &kp LEFT_ALT  &kp A            &kp S        &kp D      &kp F       &kp G           &kp H        &kp J          &kp K      &kp L              &kp P          &mt RCTRL SQT
+        &kp RCTRL     &kp Z            &kp X        &kp C      &kp V       &kp B           &kp N        &kp M          &kp COMMA  &kp DOT            &kp FSLH       &kp UNDERSCORE
+                                       &kp LSHIFT   &lt 2 TAB  &kp SPACE   &lt 1 ESCAPE    &lt 1 ENTER  &kp BACKSPACE  &lt 2 DEL  &kp RIGHT_CONTROL
             >;
         };
 
         lower_layer {
             bindings = <
-        &trans          &trans    &trans  &trans     &trans    &trans       &trans     &trans    &trans     &trans    &trans    &trans
-&trans  &kp UNDER       &kp F1    &kp F2  &kp F3     &kp F4    &kp F5       &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11          &mt RGUI F12
-        &mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-        &mt LALT EQUAL  &kp N1    &kp N2  &kp N3     &kp N4    &kp N5       &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &trans
-                                  &trans  &lt 3 TAB  &trans    &trans       &trans     &trans    &lt 3 DEL  &trans
+        &trans          &trans    &trans  &trans     &trans    &trans       &trans         &trans  &trans     &trans    &trans    &trans
+&trans  &kp UNDER       &kp F1    &kp F2  &kp F3     &kp F4    &kp F5       &kp F6         &kp F7  &kp F8     &kp F9    &kp F10   &kp F11          &mt RGUI F12
+        &mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp LESS_THAN  &kp GT  &kp PIPE   &kp LPAR  &kp RPAR  &mt RCTRL MINUS
+        &mt LALT EQUAL  &kp N1    &kp N2  &kp N3     &kp N4    &kp N5       &kp N6         &kp N7  &kp N8     &kp N9    &kp N0    &trans
+                                  &trans  &lt 3 TAB  &trans    &trans       &trans         &trans  &lt 3 DEL  &trans
             >;
         };
 
@@ -58,6 +58,16 @@
        &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
        &sys_reset   &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &sys_reset
                                   &none         &trans        &none         &trans          &trans        &none         &trans        &none
+            >;
+        };
+
+        rus {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans     &trans               &trans           &trans          &trans     &trans   &trans         &trans
+&tog 0  &trans  &kp Q   &kp W   &kp T   &kp R      &kp E                &kp Y            &kp U           &kp I      &kp O    &kp P          &kp LEFT_BRACKET  &trans
+        &trans  &kp A   &kp S   &kp D   &kp F      &kp G                &kp H            &kp J           &kp K      &kp L    &kp SEMICOLON  &kp SQT
+        &trans  &kp Z   &kp X   &kp C   &kp V      &kp B                &kp LS(RBKT)     &kp M           &kp COMMA  &kp DOT  &trans         &trans
+                        &trans  &trans  &kp SPACE  &mt LSHIFT ESCAPE    &mt RCTRL ENTER  &kp LS(DELETE)  &trans     &trans
             >;
         };
     };

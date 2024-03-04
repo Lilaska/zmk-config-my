@@ -17,6 +17,9 @@
 
 &mt { quick_tap_ms = <200>; };
 
+&gresc {
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";

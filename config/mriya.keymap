@@ -66,7 +66,7 @@
         &trans  &trans  &trans  &trans  &trans     &trans               &trans           &trans         &trans     &trans   &trans         &trans
 &tog 4  &trans  &kp Q   &kp W   &kp T   &kp R      &kp E                &kp Y            &kp U          &kp I      &kp O    &kp P          &kp LEFT_BRACKET  &kp CLCK
         &trans  &kp A   &kp S   &kp D   &kp F      &kp G                &kp H            &kp J          &kp K      &kp L    &kp SEMICOLON  &kp SQT
-        &trans  &kp Z   &kp X   &kp C   &kp V      &kp B                &kp LS(RBKT)     &kp M          &kp COMMA  &kp DOT  &trans         &trans
+        &trans  &kp Z   &kp X   &kp C   &kp V      &kp B                &kp N            &kp M          &kp COMMA  &kp DOT  &trans         &trans
                         &trans  &trans  &kp SPACE  &mt LSHIFT ESCAPE    &mt RCTRL ENTER  &kp BACKSPACE  &trans     &trans
             >;
         };

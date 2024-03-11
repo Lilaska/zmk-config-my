@@ -30,6 +30,16 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
+
+        brace_mod_behavior: brace_mod_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BRACE_MOD_BEHAVIOR";
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {

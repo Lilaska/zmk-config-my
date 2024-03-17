@@ -40,6 +40,16 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        bracket_shiftmod: bracket_shiftmod {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BRACKET_SHIFTMOD";
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -47,11 +57,11 @@
 
         default_layer {
             bindings = <
-        &kp PLUS   &kp EXCLAMATION  &kp AT_SIGN  &kp DLLR      &kp HASH   &kp PERCENT    &kp QMARK  &kp AMPS       &kp STAR   &shiftmod_par      &brace_mod_behavior  &kp MINUS
-&tog 4  &kp EQUAL  &kp Q            &kp W        &kp E         &kp R      &kp T          &kp Y      &kp U          &kp I      &kp O              &kp SEMICOLON        &kp LBKT        &kp CLCK
-        &kp TAB    &kp A            &kp S        &kp D         &kp F      &kp G          &kp H      &kp J          &kp K      &kp L              &kp P                &mt RCTRL SQT
-        &kp RCTRL  &kp Z            &kp X        &kp C         &kp V      &kp B          &kp N      &kp M          &kp COMMA  &kp DOT            &kp FSLH             &kp UNDERSCORE
-                                    &kp LSHIFT   &kp LEFT_ALT  &kp SPACE  &lt 2 ENTER    &lt 1 ESC  &kp BACKSPACE  &lt 2 DEL  &kp RIGHT_CONTROL
+        &kp PLUS   &kp EXCLAMATION  &kp AT_SIGN  &kp DLLR        &kp HASH   &kp PERCENT    &kp QMARK  &kp AMPS       &kp STAR   &shiftmod_par    &brace_mod_behavior  &kp MINUS
+&tog 4  &kp EQUAL  &kp Q            &kp W        &kp E           &kp R      &kp T          &kp Y      &kp U          &kp I      &kp O            &kp SEMICOLON        &bracket_shiftmod  &kp CLCK
+        &kp TAB    &kp A            &kp S        &kp D           &kp F      &kp G          &kp H      &kp J          &kp K      &kp L            &kp P                &mt RCTRL SQT
+        &kp RCTRL  &kp Z            &kp X        &kp C           &kp V      &kp B          &kp N      &kp M          &kp COMMA  &kp DOT          &kp FSLH             &kp RIGHT_CONTROL
+                                    &kp LALT     &kp LEFT_SHIFT  &kp SPACE  &lt 2 ENTER    &lt 1 ESC  &kp BACKSPACE  &lt 2 DEL  &kp RIGHT_SHIFT
             >;
         };
 
@@ -67,11 +77,11 @@
 
         raise_layer {
             bindings = <
-                        &trans           &trans           &trans     &trans            &trans     &trans                &trans        &trans    &trans     &trans     &trans           &trans
-&mt LA(LEFT_SHIFT) END  &kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp KP_N8         &kp KP_N9  &kp KP_MINUS          &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS         &trans
-                        &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp LC(LEFT_ALT)  &kp LC(W)  &kp LC(LEFT_SHIFT)    &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
-                        &trans           &kp KP_N0        &kp KP_N1  &kp KP_N2         &kp KP_N3  &kp KP_DOT            &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &trans
-                                                          &trans     &trans            &trans     &lt 3 RET             &lt 3 ESC     &trans    &trans     &trans
+                        &trans           &trans           &trans     &trans            &trans       &trans                &trans        &trans    &trans     &trans     &trans           &trans
+&mt LA(LEFT_SHIFT) END  &kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp LC(TAB)       &kp LA(TAB)  &kp KP_MINUS          &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS         &trans
+                        &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp LC(LEFT_ALT)  &kp LC(W)    &kp LC(LEFT_SHIFT)    &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
+                        &trans           &kp KP_N0        &kp KP_N1  &kp KP_N2         &kp KP_N3    &kp KP_DOT            &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &trans
+                                                          &trans     &trans            &trans       &lt 3 RET             &lt 3 ESC     &trans    &trans     &trans
             >;
         };
 
